@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+  <title>Document</title>
+  <style>
+    :root {
+      --white: #FFFFFF;
+      --black: #000000;
+      --very-light-pink: #C7C7C7;
+      --text-input-field: #F7F7F7;
+      --hospital-green: #ACD9B2;
+      --sm: 14px;
+      --md: 16px;
+      --lg: 18px;
+    }
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+    }
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 240px);
+      gap: 26px;
+      place-content: center;
+    }
+    .product-card {
+      width: 240px;
+    }
+    .product-card img {
+      width: 240px;
+      height: 240px;
+      border-radius: 20px;
+      object-fit: cover;
+    }
+    .product-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 12px;
+    }
+    .product-info figure {
+      margin: 0;
+    }
+    .product-info figure img {
+      width: 35px;
+      height: 35px;
+    }
+    .product-info div p:nth-child(1) {
+      font-weight: bold;
+      font-size: var(--md);
+      margin-top: 0;
+      margin-bottom: 4px;
+    }
+    .product-info div p:nth-child(2) {
+      font-size: var(--sm);
+      margin-top: 0;
+      margin-bottom: 0;
+      color: var(--very-light-pink);
+    }
+    @media (max-width: 640px) {
+      .cards-container {
+        grid-template-columns: repeat(auto-fill, 140px);
+      }
+      .product-card {
+        width: 140px;
+      }
+      .product-card img {
+        width: 140px;
+        height: 140px;
+      }
+    }
+  </style>
+<body>
+  <section class="main-container">
+    <div class="cards-container">
+
+      <div class="product-card">
+        <img src="data:image/jpeg;base64,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" alt="">
+        <div class="product-info">
+          <div>
+            <p>USD 55.00,000</p>
+            <p>Ferrari F430</p>
+          </div>
+          <figure>
+            <img src="./icons/bt_add_to_cart.svg" alt="">
+          </figure>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.pexels.com/photos/5759865/pexels-photo-5759865.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+        <div class="product-info">
+          <div>
+            <p>USD 44.000,000</p>
+            <p>Ferrari F430</p>
+          </div>
+          <figure>
+            <img src="./icons/bt_add_to_cart.svg" alt="">
+          </figure>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.pexels.com/photos/6060938/pexels-photo-6060938.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+        <div class="product-info">
+          <div>
+            <p>USD 90.000,000</p>
+            <p>Ferrari GOLD</p>
+          </div>
+          <figure>
+            <img src="./icons/bt_add_to_cart.svg" alt="">
+          </figure>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.pexels.com/photos/6462662/pexels-photo-6462662.png?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+        <div class="product-info">
+          <div>
+            <p>USD 60.000,000</p>
+            <p>Lamborghini</p>
+          </div>
+          <figure>
+            <img src="./icons/bt_add_to_cart.svg" alt="">
+          </figure>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.pexels.com/photos/5288699/pexels-photo-5288699.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+        <div class="product-info">
+          <div>
+            <p>USD 66.000,000</p>
+            <p>Lamborghini</p>
+          </div>
+          <figure>
+            <img src="./icons/bt_add_to_cart.svg" alt="">
+          </figure>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.pexels.com/photos/5730166/pexels-photo-5730166.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+        <div class="product-info">
+          <div>
+            <p>USD 69.000,000</p>
+            <p>Lamborghini</p>
+          </div>
+          <figure>
+            <img src="./icons/bt_add_to_cart.svg" alt="">
+          </figure>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.pexels.com/photos/3972755/pexels-photo-3972755.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+        <div class="product-info">
+          <div>
+            <p>USD 70.000,000</p>
+            <p>Lamborghini</p>
+          </div>
+          <figure>
+            <img src="./icons/bt_add_to_cart.svg" alt="">
+          </figure>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.pexels.com/photos/3752169/pexels-photo-3752169.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+        <div class="product-info">
+          <div>
+            <p>USD 89.000,000</p>
+            <p>Lamborghini</p>
+          </div>
+          <figure>
+            <img src="./icons/bt_add_to_cart.svg" alt="">
+          </figure>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.pexels.com/photos/9814981/pexels-photo-9814981.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+        <div class="product-info">
+          <div>
+            <p>USD 88.000,000</p>
+            <p>Lamborghini</p>
+          </div>
+          <figure>
+            <img src="./icons/bt_add_to_cart.svg" alt="">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
